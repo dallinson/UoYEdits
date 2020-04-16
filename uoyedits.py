@@ -4,14 +4,16 @@ import socket
 import irc
 import configparser
 import os
+import ipaddress
 
 
 def valid_ip(address):
     try:
-        socket.inet_aton(address)
-        return True
-    except BaseException:
+        ipaddress.ip_address(address)
+    except ValueError:
         return False
+    else:
+        return True
 
 
 def is_uoy_ip(address):
