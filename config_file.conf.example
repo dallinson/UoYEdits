@@ -1,0 +1,4 @@
+[irc_config]
+server=       ; The irc server to connect to
+channel=      ; The irc channel on said server to join without the leading #
+nickname=     ; The nickname of the irc bot
